@@ -1,0 +1,25 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1rem;
+
+  .editor {
+    div.jsoneditor-menu > button {
+  background-image: url('https://jsoneditoronline.org/img/jsoneditor-icons.svg');
+}
+
+  }
+
+  .forms {
+    height: 100%;
+  }
+}
+
+
+:host ::ng-deep json-editor,
+:host ::ng-deep json-editor .jsoneditor,
+:host ::ng-deep json-editor > div,
+:host ::ng-deep json-editor jsoneditor-outer {
+  height: 800px;
+}

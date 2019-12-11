@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/scss/bootstrap.scss';
+body { padding: 10px; }
+@import '~jsoneditor/dist/jsoneditor.min.css';
+
+textarea.jsoneditor-text{min-height:600px;}
+
+/**  Copyright 2018 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license */
