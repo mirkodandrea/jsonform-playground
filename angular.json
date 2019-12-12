@@ -25,14 +25,24 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "node_modules/bootstrap-italia/dist/fonts/",
+                "output": "bootstrap-italia/dist/fonts/"
+              }
             ],
             "styles": [
+              "node_modules/bootstrap-italia/dist/css/bootstrap-italia.min.css",
+              "node_modules/animate.css/source/_base.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.css",
+              "node_modules/animate.css/animate.css",
               "src/styles.scss"
-              
             ],
             "scripts": [
-              
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js"
             ]
           },
           "configurations": {
