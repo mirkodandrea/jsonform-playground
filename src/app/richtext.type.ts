@@ -19,13 +19,21 @@ export class RichtextTypeComponent extends FieldType implements OnInit {
       
       minHeight: '10rem',
       fonts: [
+        /*
         {class: 'gill-sans-mt', name: 'Gill Sans MT'},
         {class: 'arial', name: 'Arial'},
         {class: 'times-new-roman', name: 'Times New Roman'},
         {class: 'calibri', name: 'Calibri'},
+        */
       ],
       toolbarHiddenButtons: [
-        ['bold', 'insertImage', 'insertVideo', 'link', 'unlink']
+        [
+          'justifyLeft', 'justifyRight', 'justifyCenter', 'justifyFull', 
+          'indent', 'outdent', 'insertImage', 'insertVideo', 
+          'link', 'unlink', 'insertUnorderedList',
+          'insertOrderedList', 'toggleEditorMode', 
+          'textColor', 'backgroundColor', 'fontSize', 'heading', 'fontName'
+        ]
       ]
   }
   public _id: string;
