@@ -1,0 +1,13 @@
+{
+    "model": {},
+    "schema": {
+    "type":"button",
+    "templateOptions":{
+      "label":"Click this guy",
+      "text":"JSON Only",
+      "btnType":"info",
+      "onClick":{},
+      "description":"These can have labels and stuff too if you want...."
+    }
+  }
+}

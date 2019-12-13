@@ -13,6 +13,7 @@ import { NullTypeComponent } from './null.type';
 
 import { DatatableTypeComponent } from './datatable.type';
 import { RichtextTypeComponent } from './richtext.type';
+import { ButtonTypeComponent } from './button.type';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 
@@ -38,6 +39,17 @@ import { AppComponent } from './app.component';
         { name: 'uniqueItems', message: 'should NOT have duplicate items' }        
       ],
       types: [
+        {
+          name: 'button',
+          component: ButtonTypeComponent,
+          wrappers: ['form-field'],
+          defaultOptions: {
+            templateOptions: {
+              btnType: 'default',
+              type: 'button',
+            },
+          },
+        },
       { name: 'string', extends: 'input' },
         {
           name: 'number',
@@ -99,7 +111,8 @@ import { AppComponent } from './app.component';
     MultiSchemaTypeComponent,
     NullTypeComponent,
     DatatableTypeComponent,
-    RichtextTypeComponent
+    RichtextTypeComponent,
+    ButtonTypeComponent
   ],
 })
 export class AppModule { }

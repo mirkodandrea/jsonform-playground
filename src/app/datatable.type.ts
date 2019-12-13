@@ -5,6 +5,7 @@ import { TableColumn } from '@swimlane/ngx-datatable';
 @Component({
   selector: 'formly-field-datatable',
   template: `
+    <label *ngIf="field.title"> {{field.title }} </label>
     <ngx-datatable
       #table
       class="bootstrap"
@@ -13,7 +14,7 @@ import { TableColumn } from '@swimlane/ngx-datatable';
       [columnMode]="to.columnMode"
       [rowHeight]="to.rowHeight"
       [headerHeight]="to.headerHeight"
-      [footerHeight]="to.footerHeight"
+      [footerHeight]="false"
       [limit]="to.limit"
       [scrollbarH]="to.scrollbarH"
       [reorderable]="to.reorderable"
