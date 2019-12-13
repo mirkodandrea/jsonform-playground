@@ -6,3 +6,441 @@ textarea.jsoneditor-text{min-height:600px;}
 /**  Copyright 2018 Google Inc. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that
     can be found in the LICENSE file at http://angular.io/license */
+
+/*============IT-alert Trigger CSS ==============*/
+// Created on Nov 2019
+// By Kasa - casasola@acrotec.it
+
+@import "global_variables.scss";
+
+
+/*===========================
+           GENERALI
+=============================*/
+.container {width: 1440px !important;}
+
+
+.btn-block {
+  border-radius: 5px;
+}
+
+body {
+  font-weight: 400;
+}
+
+.tooltip {
+  font-size: 15px;
+}
+
+.fas, .fa {
+  margin-right: 3px;
+}
+
+/*--- SEPARATORE ---*/
+.separatore5 {
+  padding-top: 5px;
+}
+.separatore10 {
+  padding-top: 10px;
+}
+.separatore20 {
+  padding-top: 20px;
+}
+.separatore40 {
+  padding-top: 40px;
+}
+
+/*===============================================*/
+/*===========STICKY HEADER & FOOTER==============*/
+/*===============================================*/
+
+#menu_bar {
+  position: sticky;
+  top: 0px;
+  z-index: 401;
+}
+/*#header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 401;
+  background-color: white;
+}*/
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1001;
+}
+
+#content {
+  margin-top: 0px;
+}
+
+/*===============================================*/
+/*==========================HOME== ==============*/
+/*===============================================*/
+
+.toolbox {
+  position: sticky;
+  top: 54px;
+  background-color: white;
+  z-index: 401;
+  .btn {
+    padding: 8px 24px;
+    cursor: pointer;
+  }
+}
+
+.side-menu {
+  background-color: #f9f9f9;
+  height: calc(100vh - 130px);
+  padding-right: 0px;
+  padding-left: 0px;
+  .active {
+    border-right: 4px solid #1f5c99;
+    background-color: #f2f2f2;
+  }
+}
+
+.main-wrapper {
+  padding: 24px 24px;
+  h3.min {
+    font-weight: 600;
+    margin-bottom: .8rem;
+    font-size: .833em;
+    margin-top: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+}
+
+.status-badge {
+  text-transform: capitalize;
+  cursor: unset !important;
+}
+
+.action-badge {
+  margin-right: 3px;
+}
+
+/*===============================================*/
+/*===============BULLETTIN EDITOR ==============*/
+/*===============================================*/
+
+.sidebar-wrapper .sidebar-linklist-wrapper .link-list-wrapper ul li a {
+  padding-bottom: 0.4em !important;
+  font-size: 14px !important;
+}
+
+.mini-menu .list-item.medium.active{
+  border-left: solid 4px #1f5c99;
+}
+
+.toolbox h4 {
+  margin-bottom: 0px;
+}
+
+textarea {
+  border-radius: 5px;
+}
+
+.form-check [type=checkbox]:focus+label, .form-check [type=radio]:focus+label, .toggles label input[type=checkbox]:focus+.lever, :focus {
+  border-color: unset;
+  -webkit-box-shadow: 0 0 0 0px #f90;
+  box-shadow: unset;
+  outline: 0;
+}
+hr {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  border: 0;
+  border-top: 2px solid rgba(0,0,0,.1);
+}
+.mini-menu {
+  //position: fixed;
+  //right: 0;
+  //top: 110px;
+}
+
+.btn-alert, .badge-alert {background-color: #a8b71c; color: white;
+}
+.btn-alert:hover {background-color: #81901b
+}
+.critic-map {
+  .btn {margin-right: 10px;}
+}
+
+iframe {
+  border: 0px !important;
+  border-radius: 8px;
+}
+
+.table td, .table th {
+  padding: 0.3em;
+  vertical-align: middle;
+}
+
+/*===============================================*/
+/*=================DOC ALL===================*/
+/*===============================================*/
+.risk-panel {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1em;
+  margin-bottom: 1em;
+  label{
+    font-weight: 700;
+  }
+}
+
+.color-panel {  label{
+  font-weight: 700;
+}
+}
+
+.icon-text i {
+  background-color: #f9f9f9;
+  padding: 5px 7px;
+  margin: 5px 2px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+
+.form-check label {position:relative}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.richtext {
+  margin-top: 1em;
+}
+
+formly-field-richtext label, formly-field-datatable label  {
+  margin-top: 15px;
+  font-weight: 700;
+}
+.datatable-body-cell {
+  padding: 5px !important;
+  .form-group {
+    margin-bottom: 0px;
+  }
+  .datatable-body-cell-label{
+    width: 100%;
+  }
+  .form-control:disabled, .form-control[readonly] {
+    background-color: transparent;
+  }
+  input[type="text"] {
+    border-bottom: 0px;
+  }
+}
+
+
+/*===============================================*/
+/*=================MODAL STUFF===================*/
+/*===============================================*/
+.modal p {
+  margin-bottom: 1.5em !important;
+}
+
+
+
+
+
+/*===============================================*/
+/*====================TABELLA====================*/
+/*===============================================*/
+
+
+.ngx-datatable .datatable-header {
+  font-weight: 700 !important;
+  border-bottom: 2px solid #d6dce3;
+
+}
+
+.datatable-row-odd {
+  background-color: #f6f7f9;
+}
+
+datatable-body-cell{
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.datatable-body-row{
+  border-bottom: 1px solid #d6dce3;
+
+  .badge{
+    cursor: pointer;
+    min-width: 96px;
+  }
+  a.badge-info {
+    color: white;
+    text-decoration: none;
+  }
+  a.badge-secondary {
+    text-decoration: none;
+  }
+  .badge-info {color: white}
+}
+
+.datatable-body-row:hover{
+  background-color: #eaf2f9;
+}
+
+
+.datatable-body-row:hover:after{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";//\f105
+  display: block;
+  margin-left: -20px;
+  color: $bs-info-color;
+  font-size: 28px;
+  opacity: 0.8;
+}
+
+.datatable-body-row.active{
+  background-color: #dfefff;
+  border-right: solid 4px $bs-info-color;
+}
+
+.datatable-body-row.active:hover:after {
+  content: none;
+}
+
+
+.datatable-header-cell, .datatable-body-cell {
+  padding: 8px;
+}
+
+.sort-btn, .sort-btn:after, .datatable-icon-up:after, .datatable-icon-down:after  {
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
+
+.sort-btn:after {
+  border-top: 5px solid transparent;
+  font-family: "Font Awesome 5 Free";
+  font-size: 14px ;
+  color: lightgrey;
+  font-weight: 900;
+  content: "\f0b0";
+  margin-left: 6px;
+}
+
+
+.datatable-icon-up:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 16px ;
+  color: black;
+  content: "\f106";
+  margin-left: 6px;
+}
+
+.datatable-icon-down:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 16px ;
+  color: black;
+  content: "\f107";
+  margin-left: 6px;
+
+}
+
+.datatable-footer {
+  padding: 8px;
+
+}
+
+.pager .pages{
+  background-color: #dfefff;
+  border-radius: 3px;
+  color: white;
+  margin-left: 2px;
+  padding: 5px;
+  margin-left: 4px !important;
+  padding: 2px 15px !important;
+  a {
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+  }
+
+}
+
+.pager {
+  .disabled a {
+    color: lightgrey;
+  }
+  .pages.active {
+    background-color: $bs-info-color;
+    a{color: white!important;}
+  }
+
+  a[role="button"] {
+    margin: 0 10px;
+    text-decoration: none}
+}
+
+
+.datatable-icon-prev:before{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f100"
+}
+
+.datatable-icon-left:before{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f104"
+}
+
+.datatable-icon-right:before{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f105"
+}
+
+.datatable-icon-skip:before{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f101"
+}
+
+.pager i {
+  font-style: unset;
+}
+
+.datatable-body-cell {
+  display: flex !important;
+  align-items: center;
+}
+
+
+.sort-btn {
+  display: none !important;
+}
+.datatable-header-cell.sortable{
+  .sort-btn{
+    display:unset !important;
+  }
+}
+
+
+.page-count span {display: none} /*nasconde contatore selezionati*/
+
+.badge-outline.grey {
+  border: solid #cccdce 2px;
+}
+.ngx-datatable .datatable-body-cell:focus, .ngx-datatable .datatable-header-cell:focus {
+  box-shadow: unset;
+}
+
