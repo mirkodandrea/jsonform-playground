@@ -1,20 +1,53 @@
 {
   "schema": [
     {
-      "className": "form-check",
-      "type": "checkbox",
-      "key": "alert",
-      "templateOptions": {
-        "label": "È in corso un avviso di condizioni meteorologiche avverse?"
-      },
-      "default": false
-    },
-    {
       "type": "input",
       "key": "protocol",
       "templateOptions": {
         "label": "Protocollo:"
       }
+    },
+    {
+      "fieldGroupClassName": "row",
+      "fieldGroup": [
+        {
+          "className": "col-sm-12 col-md-12 col-lg-6 col-xl-6 form-check",
+          "type": "checkbox",
+          "key": "alert",
+          "templateOptions": {
+            "label": "È in corso un avviso di condizioni meteorologiche avverse?"
+          },
+          "default": false
+        },
+        {
+          "className": "col-sm-12 col-md-12 col-lg-6 col-xl-6 form-check risk-panel",
+          "key": "risks",
+          "type": "multicheckbox",
+          "defaultValue": {
+            "rain": false,
+            "wind": false,
+            "snow": false
+          },
+          "templateOptions": {
+            "label": "Per quali rischi?",
+            "options": [
+              {
+                "label": "Neve",
+                "value": "snow"
+              },
+              {
+                "label": "Vento",
+                "value": "wind"
+              },
+              {
+                "label": "Pioggia",
+                "value": "rain"
+              }
+            ]
+          },
+          "hideExpression": "!model.alert"
+        }
+      ]
     },
     {
       "type": "richtext",
@@ -23,34 +56,6 @@
       "templateOptions": {},
       "hideExpression": "model.alert",
       "defaultValue": "Il documento &quot;Previsione Sinottica e QPF&quot; emesso dal DPC in data XX/XX/2019 riporta una previsione di:"
-    },
-    {
-      "className": "form-check risk-panel",
-      "key": "risks",
-      "type": "multicheckbox",
-      "defaultValue": {
-        "rain": false,
-        "wind": false,
-        "snow": false
-      },
-      "templateOptions": {
-        "label": "Per quali rischi?",
-        "options": [
-          {
-            "label": "Neve",
-            "value": "snow"
-          },
-          {
-            "label": "Vento",
-            "value": "wind"
-          },
-          {
-            "label": "Pioggia",
-            "value": "rain"
-          }
-        ]
-      },
-      "hideExpression": "!model.alert"
     },
     {
       "key": "risk_selected",
@@ -324,89 +329,5 @@
       ]
     }
   ],
-  "model": {
-    "message_noalert": "Il documento &quot;Previsione Sinottica e QPF&quot; emesso dal DPC in data XX/XX/2019 riporta una previsione di:",
-    "risks": {
-      "rain": false,
-      "wind": false,
-      "snow": true
-    },
-    "snow_wind": {
-      "message": "La Presidenza del Consiglio dei Ministri - Dipartimento della Protezione Civile ha emesso l’Avviso di condizioni meteorologiche avverse n.XXXX prot.DPC/RIA/XXXXXXX de lXX.XX.2019 con indicazione che:",
-      "conditions": "<b>dalle prime ore di domani, venerd&#236; XX.XX.2019, e per le successive 18-24 ore, si prevedono sul Lazio: Venti forti occidentali con raffiche di burrasca. Mareggiate lungo le coste esposte. Dal primo pomeriggio di domani, venerd&#236; XX.XX.2019, e per le successive 12-18 ore, si prevedono nevicate a quote superiori ai 1000 metri con apporti al suolo da deboli a moderati.</b>",
-      "evaluation": "Si invitano pertanto gli Enti destinatari ad attivare le fasi operative previste dalla propria pianificazione di Protezione Civile ed adottare tutti gli adempimenti di competenza in relazione ai seguenti <b>Livelli di Allerta</b> (di cui alle &quot;Direttive sul sistema di Allertamento per il rischio idrogeologico ed idraulico ai fini di protezione civile della Regione Lazio&quot;, approvate con DGR XXXXXX)."
-    },
-    "rain": {
-      "message": "La Presidenza del Consiglio dei Ministri - Dipartimento della Protezione Civile ha emesso l’Avviso di condizioni meteorologiche avverse n.xxxxx prot.DPC/RIA/xxxxxdelxx.xx.2019 con indicazione che dal mattino di domani, venerdi xx Settembre 2019, e per le successive 18-24 ore, si prevedono in estensione sul Lazio:",
-      "conditions": "<b>precipitazioni sparse, anche a carattere di rovescio o temporale, in particolare sui settori interni e montuosi. I fenomeni saranno accompagnati da rovesci di forte intensità, frequente attività elettrica e forti raffiche di vento.</b>",
-      "evaluation": "Tenuto conto altresì delle caratteristiche spazio temporali delle precipitazioni previste e della loro intensità, dello stato di saturazione dei suoli e dei livelli dei corsi d’acqua, nonché delle indicazioni rese disponibili dai presidi territoriali e dalla modellistica idrologica ed idraulica, della suddivisione del territorio regionale in Zone di Allerta, il Centro Funzionale Regionale ha effettuato la <b>valutazione dei Livelli di Allerta/Criticità</b> riportata nella seguente tabella. Si invitano pertanto gli Enti destinatari ad attivare le fasi operative previste dalla propria pianificazione di Protezione Civile ed adottare tutti gli adempimenti di competenza in relazione ai seguenti Livelli di Allerta (di cui alle &quot;Direttive sul sistema di Allertamento per il rischio idrogeologico ed idraulico ai fini di protezione civile della Regione Lazio&quot;, approvate con DGR XXXXXX)."
-    },
-    "rain_snow_wind": {
-      "message": "La Presidenza del Consiglio dei Ministri - Dipartimento della Protezione Civile ha emesso l’Avviso di condizioni meteorologiche avverse n.xxxxx prot.DPC/RIA/xxxxxdelxx.xx.2019 con indicazione che:",
-      "conditions": "<b>dalle prime ore di domani, venerdì XX.XX.2019, e per le successive 18-24 ore, si prevedono sul Lazio: Venti forti occidentali con raffiche di burrasca. Mareggiate lungo le coste esposte. Dal primo mattino di domani e per le successive 18-24 ore si prevedono precipitazioni da sparse a diffuse, anche a carattere di rovescio o temporale, specie sui settori appenninici. I fenomeni saranno accompagnati da rovesci di forte intensità, frequente attività elettrica e forti raffiche di vento. Dal primo pomeriggio di domani, venerdì XX.XX.2019, e per le successive 12-18 ore, si prevedono nevicate a quote superiori ai 500 metri con apporti al suolo da deboli a moderati.</b>",
-      "evaluation": "Tenuto conto altresì delle caratteristiche spazio temporali delle precipitazioni previste e della loro intensità, dello stato di saturazione dei suoli e dei livelli dei corsi d’acqua, nonchè delle indicazioni rese disponibili dai presidi territoriali e dalla modellistica idrologica ed idraulica, della suddivisione del territorio regionale in Zone di Allerta, il Centro Funzionale Regionale ha effettuato la <b>valutazione dei Livelli di Allerta/Criticità</b> riportata nelle seguenti tabelle. Si invitano pertanto gli Enti destinatari ad attivare le fasi operative previste dalla propria pianificazione di Protezione Civile ed adottare tutti gli adempimenti di competenza in relazione ai seguenti Livelli di Allerta (di cui alle &quot;Direttive sul sistema di Allertamento per il rischio idrogeologico ed idraulico ai fini di protezione civile della Regione Lazio&quot;, approvate con DGR XXXXXX)."
-    },
-    "snow_table": [
-      {
-        "zone": "A - Bacini Costieri Nord",
-        "level": "Rossa"
-      },
-      {
-        "zone": "B - Bacini Medio Tevere",
-        "level": null
-      },
-      {
-        "zone": "C - Appennino di Rieti",
-        "level": null
-      },
-      {
-        "zone": "D - Bacini di Roma",
-        "level": null
-      },
-      {
-        "zone": "E - Aniene",
-        "level": null
-      },
-      {
-        "zone": "F - Bacini Costieri Sud",
-        "level": null
-      },
-      {
-        "zone": "G - Bacino del Liri",
-        "level": null
-      }
-    ],
-    "wind_table": [
-      {
-        "zone": "A - Bacini Costieri Nord",
-        "level": null
-      },
-      {
-        "zone": "B - Bacini Medio Tevere",
-        "level": null
-      },
-      {
-        "zone": "C - Appennino di Rieti",
-        "level": null
-      },
-      {
-        "zone": "D - Bacini di Roma",
-        "level": null
-      },
-      {
-        "zone": "E - Aniene",
-        "level": null
-      },
-      {
-        "zone": "F - Bacini Costieri Sud",
-        "level": null
-      },
-      {
-        "zone": "G - Bacino del Liri",
-        "level": null
-      }
-    ],
-    "risk_selected": "snow_wind",
-    "alert": true
-  }
+  "model": {}
 }
