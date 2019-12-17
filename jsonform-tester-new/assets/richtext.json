@@ -1,0 +1,52 @@
+{
+  "model": {
+    "text": "prova",
+    "text2": "prova2"
+  },
+  "schema": [
+    {
+      "key": "text",
+      "type": "richtext",
+      "templateOptions": {
+        "angularEditorOptions": {
+          "editable": true,
+          "spellcheck": true,
+          "height": "100hv",
+          "minHeight": "10rem",
+          "fonts": [
+            {
+              "class": "gill-sans-mt",
+              "name": "Gill Sans MT"
+            },
+            {
+              "class": "arial",
+              "name": "Arial"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "key": "text2",
+      "type": "richtext",
+      "templateOptions": {
+        "angularEditorOptions": {
+          "editable": true,
+          "spellcheck": true,
+          "height": "100hv",
+          "minHeight": "10rem",
+          "fonts": [
+            {
+              "class": "gill-sans-mt",
+              "name": "Gill Sans MT"
+            },
+            {
+              "class": "arial",
+              "name": "Arial"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

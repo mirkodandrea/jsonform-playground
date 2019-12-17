@@ -1,0 +1,68 @@
+{
+  "model": {
+    "notes": [
+      {
+        "zone": "A",
+        "note": ""
+      },
+      {
+        "zone": "B",
+        "note": ""
+      },
+      {
+        "zone": "C",
+        "note": ""
+      },
+      {
+        "zone": "D",
+        "note": ""
+      },
+      {
+        "zone": "E",
+        "note": ""
+      },
+      {
+        "zone": "F",
+        "note": ""
+      }
+    ]
+  },
+  "schema": [
+    {
+      "type": "datatable",
+      "key": "notes",
+      
+      "templateOptions": {
+        "columns": [
+          {
+            "name": "Zona",
+            "prop": "zone"
+          },
+          {
+            "name": "Note",
+            "prop": "note"
+          }
+        ]
+      },
+      "fieldArray": {
+        "fieldGroup": [
+          {
+            "type": "input",
+            "key": "zone",
+            "templateOptions": {
+              "required": true,
+              "disabled": true
+            }
+          },
+          {
+            "type": "input",
+            "key": "note",
+            "templateOptions": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
