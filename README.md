@@ -1,4 +1,6 @@
-# JsonformTesterNew
+# Jsonform-Playground
+
+Available at [https://mirkodandrea.github.io/jsonform-playground/](https://mirkodandrea.github.io/jsonform-playground/)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
 
