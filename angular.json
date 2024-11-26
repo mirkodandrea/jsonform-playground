@@ -138,5 +138,8 @@
         }
       }
     }},
-  "defaultProject": "jsonform-tester-new"
+  "defaultProject": "jsonform-tester-new",
+  "cli": {
+    "analytics": "755a1d68-8742-4a83-878b-67834edb4497"
+  }
 }
